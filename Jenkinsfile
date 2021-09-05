@@ -5,7 +5,6 @@ pipeline {
    parameters {
         choice(name: 'NAME_SPACE', choices: ['dev', 'ppe', 'prod'], description: 'Environment to deploy the service')
         booleanParam(defaultValue: true, description: 'Run Sonarqube ?', name: 'sonarqube')
-
     }
 
    stages {
@@ -25,8 +24,7 @@ pipeline {
                                 branch: env.BRANCH_NAME,
                                 changelog: true
                         )
-                    }
-                
+                 } 
                 stage('Build') {
                     steps {
                         echo 'Building...'
@@ -39,12 +37,13 @@ pipeline {
                 }
          }
       }
-         stage("Test") {
+		stage("Test") {
             steps {
                echo "Testing..."
             }
-         }
+      }
   }
+}
 }
 
 // Function to notify build status
