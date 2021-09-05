@@ -9,7 +9,6 @@ pipeline {
     }
 
    stages {
-      echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
       stage('Build Trigger') {
          // When the condition matches, only run the "Steps"
          when {
@@ -40,6 +39,11 @@ pipeline {
                 }
          }
       }
+         stage("Test") {
+            steps {
+               echo "Testing..."
+            }
+         }
   }
 }
 
