@@ -44,7 +44,7 @@ pipeline {
       }
   }
 }
-}
+
 
 // Function to notify build status
 def notifyBuild(String buildStatus = 'STARTED') {
