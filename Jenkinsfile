@@ -72,3 +72,4 @@ def notifyBuild(String buildStatus = 'STARTED') {
         colorCode = '#FF0000'
     }
 }
+}
