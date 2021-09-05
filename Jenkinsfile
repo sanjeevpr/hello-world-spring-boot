@@ -26,7 +26,7 @@ pipeline {
                                 changelog: true
                         )
                     }
-                }
+                
                 stage('Build') {
                     steps {
                         echo 'Building...'
